@@ -12,9 +12,11 @@ public class Bubble {
 		int size = arr.length;
 		int temp;
 		
+		
+		//Алгоритм пузырьковой сортировки массива
 		for(int i = 1; i < size; i++) {
 			
-			for(int j = size - 1; j >= i; j--) {
+			for(int j = size-1; j >= i; j--) {
 				
 				if(arr[j-1] < arr[j]) {
 					
@@ -25,8 +27,22 @@ public class Bubble {
 				}
 			}
 		}
+	
+		int[] arrSort = new int[size];
+		int j = 0;
 		
+		
+		for(int i = size-1; i >= 0; i--) {
+	
+			arrSort[j] = arr[i];
+			j++;
+			
+		}
+	
+
 		System.out.println(Arrays.toString(arr));
+		System.out.println(Arrays.toString(arrSort));
+	
 	}
 
 }
